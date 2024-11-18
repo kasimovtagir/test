@@ -1,5 +1,8 @@
 FROM ubuntu:22.04
 
+# Set environment variables to avoid interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y nginx php-fpm php-mysql mc
